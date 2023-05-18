@@ -3,7 +3,7 @@ import styled from "styled-components";
 import privated from "assets/images/privado.svg";
 import icon__eye from "assets/images/olho.svg";
 import money from "assets/images/dinheiro.svg";
-import {Balance, Box, Button, Detail, Icon} from "Components/UI";
+import {Balance, Box, Button, Detail, Icon, IconTheme} from "Components/UI";
 
 const MarginIcon = styled(Icon)`
   margin-top: 2px;
@@ -19,7 +19,7 @@ const Account = () => {
       <div style={{ fontSize: "26px", padding: "20px 0" }}>
         Saldo disponível{" "}
         <span>
-          <Icon src={money} alt="Ícone Saldo" />
+          <IconTheme src={money} alt="Ícone Saldo" />
         </span>
         {toggleState ? (
           <Balance>
