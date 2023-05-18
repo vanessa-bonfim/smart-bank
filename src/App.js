@@ -8,19 +8,30 @@ import { BtnTheme } from "Components/UI";
 import SwitcherTheme from "Components/SwitcherTheme";
 import { useState } from "react";
 
-
+// Função principal do aplicativo
 function App() {
-const [theme, setTheme] = useState(true);
-const toggleTheme = () => {
-  setTheme((theme) => !theme);
-}
-  return ( 
+  // Estado para controlar o tema (claro ou escuro)
+  const [theme, setTheme] = useState(true);
+
+  // Função para alternar o tema
+  const toggleTheme = () => {
+    setTheme((theme) => !theme);
+  };
+
+  return (
     <ThemeProvider theme={theme ? lightTheme : darkTheme}>
+      {/* Aplica o tema global */}
       <GlobalStyle />
+
+      {/* Botão para alternar o tema */}
       <BtnTheme onClick={toggleTheme}>
-        <SwitcherTheme theme={theme}/>
+        <SwitcherTheme theme={theme} />
       </BtnTheme>
+
+      {/* Componente do cabeçalho */}
       <Header />
+
+      {/* Componente principal */}
       <Main />
     </ThemeProvider>
   );
