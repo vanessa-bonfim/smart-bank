@@ -1,7 +1,7 @@
 import React from "react";
-import Container from "Components/Container";
 import Header from "Components/Header";
 import { GlobalStyle } from "Components/GlobalStyle";
+import Main from "Components/Main";
 
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
     <>
       <GlobalStyle />
       <Header />
-      <Container />
+      <Main />
     </>
   );
 }
