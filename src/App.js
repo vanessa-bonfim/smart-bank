@@ -1,6 +1,15 @@
+import React from "react";
+import Container from "Components/Container";
+import Header from "Components/Header";
+
+
+
 function App() {
   return (
-    <h1>Olá Yarn</h1>
+    <>
+      <Header />
+      <Container />
+    </>
   );
 }
 
